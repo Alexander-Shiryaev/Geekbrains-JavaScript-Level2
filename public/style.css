@@ -1,0 +1,62 @@
+body {
+    font-family: 'Itim', cursive;
+}
+
+#snake-field {
+    display: inline-block;
+}
+
+#snake-renew,
+#snake-start {
+    width: 150px;
+    padding: 15px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+}
+
+.game-table {
+    border-collapse: collapse;
+    background-color: #9EE592;
+}
+
+td.game-table-cell {
+    width: 20px;
+    height: 20px;
+    border: 1px none #eee;
+}
+
+.snake-unit {
+    background-color: green;
+}
+
+.food-unit {
+    background-color: red;
+}
+
+.bomb-unit {
+    background-color: yellow;
+}
+
+#game-result {
+    text-align: start;
+    padding: 0 20px;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+#game-score {
+    font-size: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap {
+    margin: 30px auto 0;
+    text-align: center;
+}
