@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cart {
+    min-height: 50px;
+}
+
+.goods-list {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.card {
+    width: 335px;
+    height: 390px;
+    background-color: #ccc;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    margin: 250px auto 0;
+}
