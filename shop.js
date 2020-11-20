@@ -47,6 +47,34 @@ class Cart extends Main {
 
 }
 
+class Button {
+    constructor(text) {
+        this.text = 'Добавить в корзину';
+        this.render();
+    }
+
+    addToCart() {
+        console.log('Clicked!');
+
+        const cartItem = document.querySelector('.cart');
+    }
+
+    render() {
+        const placeToRenderBtn = document.querySelectorAll('.card');
+        placeToRenderBtn.forEach((elem) => {
+            if (placeToRenderBtn) {
+                const btn = document.createElement('button');
+                btn.classList.add('btn');
+                btn.innerHTML = this.text;
+                elem.appendChild(btn);
+                btn.addEventListener('click', () => {
+                    this.addToCart();
+                });
+            }
+        });
+    }
+}
+
 class GoodItem {
     name = '';
     model = '';
@@ -60,30 +88,16 @@ class GoodItem {
 
     render() {
         const placeToRender = document.querySelector('.goods-list');
-
         if (placeToRender) {
             const block = document.createElement('div');
             block.classList.add("card");
             block.innerHTML = `${this.name} ${this.model} ${this.price}`;
             placeToRender.appendChild(block);
-        }
-
-
-
-        const placeToRenderBtn = document.querySelectorAll('.card');
-        console.log(placeToRenderBtn);
-        
-        if (placeToRenderBtn) {
-            placeToRenderBtn.forEach((elem) => {
-                const btn = document.createElement('button');
-                btn.classList.add("btn");
-                btn.innerHTML = 'Купить';
-                elem.appendChild(btn);
-            });
-        }
     }
+}
 }
 
 
 const list = new List();
 const cart = new Cart();
+const button = new Button();
