@@ -23,7 +23,7 @@ class Button {
     }
   
     getMainTemplate () {
-      const btn = document.createElement('div')
+      const btn = document.createElement('button')
       btn.classList.add('btn')
   
       return btn
