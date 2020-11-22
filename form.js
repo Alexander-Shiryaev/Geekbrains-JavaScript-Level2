@@ -21,6 +21,7 @@ class Form {
 
         const formButton = new Button('Связаться с нами');
         placeToRender.querySelector('.btn_holder').appendChild(formButton.getTemplate());
+        formButton.classList.add('form__btn');
     }
 }
 
