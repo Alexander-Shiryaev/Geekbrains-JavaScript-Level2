@@ -47,6 +47,7 @@ img {
   display: block;
   cursor: pointer;
   outline: none;
+  border: none;
   border-radius: 5px;
   background: #393939;
   padding: 15px;
@@ -54,10 +55,11 @@ img {
   user-select: none;
   margin: 20px auto;
   width: 230px;
+  font-size: 18px;
 }
 
 .btn:hover {
-  background: #ccc;
+  background: #eee;
   color: #393939;
 }
 
@@ -83,4 +85,33 @@ img {
   white-space: nowrap;
   border-bottom: 1px solid #ccc;
   padding: 10px;
+}
+
+form {
+  padding: 50px 100px;
+  background-color: #555;
+}
+
+.form__title {
+  margin: 0 0 50px 0;
+  color: #fff;
+}
+
+input {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 15px;
+  width: 400px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-size: 18px;
+}
+
+.valid {
+  border: 2px solid green;
+}
+
+.invalid {
+  border: 1px solid red;
 }
