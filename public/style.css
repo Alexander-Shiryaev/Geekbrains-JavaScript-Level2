@@ -70,7 +70,7 @@ img {
 .cart_list {
   position: absolute;
   top: 70px;
-  right: -90px;
+  right: -120px;
   display: none;
   background: #fff;
   width: 350px;
