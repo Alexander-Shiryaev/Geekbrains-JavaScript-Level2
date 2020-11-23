@@ -204,3 +204,4 @@ class GoodItemInCart extends GoodItem {
 
 const CartInstance = new Cart();
 const ListInstance = new List(CartInstance);
+const FormInstance = new Form();
