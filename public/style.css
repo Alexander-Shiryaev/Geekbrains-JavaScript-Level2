@@ -1,62 +1,86 @@
 body {
-    font-family: 'Itim', cursive;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-#snake-field {
-    display: inline-block;
+header {
+  background: #555;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-#snake-renew,
-#snake-start {
-    width: 150px;
-    padding: 15px;
-    color: white;
-    background-color: green;
-    text-align: center;
-    cursor: pointer;
-    float: left;
+.catalog {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #eee;
+  padding: 50px;
 }
 
-.game-table {
-    border-collapse: collapse;
-    background-color: #9EE592;
+h1 {
+  text-align: center;
 }
 
-td.game-table-cell {
-    width: 20px;
-    height: 20px;
-    border: 1px none #eee;
+.card {
+  width: 335px;
+  height: 390px;
+  background-color: #ccc;
+  margin: 0 50px 50px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.snake-unit {
-    background-color: green;
+img {
+  width: 150px;
 }
 
-.food-unit {
-    background-color: red;
+.meta__row {
+  margin: 8px 0;
 }
 
-.bomb-unit {
-    background-color: yellow;
+.btn {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  background: #393939;
+  padding: 15px;
+  color: #fff;
+  user-select: none;
+  margin: 20px auto;
+  width: 230px;
 }
 
-#game-result {
-    text-align: start;
-    padding: 0 20px;
-    margin: 0 0 10px 0;
-    font-size: 20px;
+.btn:hover {
+  background: #ccc;
+  color: #393939;
 }
 
-#game-score {
-    font-size: 25px;
+.cart {
+  position: relative;
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-between;
+.cart_list {
+  position: absolute;
+  top: 70px;
+  right: -90px;
+  display: none;
+  background: #fff;
+  width: 350px;
+  color: #000;
 }
 
-.wrap {
-    margin: 30px auto 0;
-    text-align: center;
+.cart_list.shown {
+  display: block;
+}
+
+.cart__good {
+  white-space: nowrap;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
 }
