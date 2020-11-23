@@ -65,7 +65,7 @@ class AbstractList {
     }
   
     fetchGoods () {
-      const result = fetch(`http://127.0.0.1:5500//database/page${this._pageCounter}.json`);
+      const result = fetch(`http://127.0.0.1:5500//public/database/page${this._pageCounter}.json`);
       return result
         .then(res => {
           return res.json();
@@ -78,7 +78,6 @@ class AbstractList {
         })
         .catch(e => {
           this.hideShowMoreBtn();
-          console.log(e);
         });
     }
   
