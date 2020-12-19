@@ -1,9 +1,7 @@
 {
-    "data": [
-        {"name": "ASUS", "model": "VivoBook", "price": "49 204 руб."},
-        {"name": "HP", "model": "ProBook 450 G7", "price": "78 540 руб."},
-        {"name": "Lenovo", "model": "IdeaPad S145", "price": "52 990 руб."},
-        {"name": "Apple", "model": "MacBook Pro 13", "price": "138 090 руб."},
-        {"name": "Acer", "model": "Swift 5", "price": "86 650 руб."}
-    ]
+        "1": {"id": 1, "name": "ASUS", "model": "VivoBook", "price": "49 204 руб."},
+        "2": {"id": 2, "name": "HP", "model": "ProBook 450 G7", "price": "78 540 руб."},
+        "3": {"id": 3, "name": "Lenovo", "model": "IdeaPad S145", "price": "52 990 руб."},
+        "4": {"id": 4, "name": "Apple", "model": "MacBook Pro 13", "price": "138 090 руб."},
+        "5": {"id": 5, "name": "Acer", "model": "Swift 5", "price": "86 650 руб."}
 }

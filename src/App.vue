@@ -1,46 +1,95 @@
 <template>
   <div>
     <header :class="[$style.header]">
-      <!-- <Cart /> -->
+      <Cart :class="[$style.cart]" />
     </header>
-    <div>
-      <h1>Список товаров:</h1>
-      <Item
-        v-for="(good, index) in items"
-        :key="index"
-        :name="good.name"
-        :model="good.model"
-        :price="good.price"
-      />
+    <div :class="[$style.main]">
+      <h1 :class="[$style.catalog]">Каталог:</h1>
+      <div :class="[$style.main__list]">
+        <Item
+          v-for="id in getItemsOnPage"
+          :key="id"
+          :id="id"
+        />
+      </div>
+      <Button @btnAction="fetchMore">Загрузить ещё</Button>
     </div>
+    <Form />
   </div>
 </template>
 
 <script>
-import Item from './Item.vue'
+
+import Cart from './components/Cart.vue'
+import Item from './components/Item.vue'
+import Button from './components/Button.vue'
+import Form from './components/Form.vue'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   components: {
+    Cart,
     Item,
+    Button,
+    Form,
   },
   data () {
     return {
-      items: [
-        {name: "ASUS", model: "VivoBook", price: "49 204 руб."},
-        {name: "HP", model: "ProBook 450 G7", price: "78 540 руб."},
-        {name: "Lenovo", model: "IdeaPad S145", price: "52 990 руб."},
-        {name: "Apple", model: "MacBook Pro 13", price: "138 090 руб."},
-        {name: "Acer", model: "Swift 5", price: "86 650 руб."}
-      ]
+      items: [],
+      page: 1
     }
   },
   methods: {
-    
+    ...mapActions('goods', [
+      'requestData',
+    ]),
+    fetchMore () {
+      this.requestData(this.page)
+        .then(() => {
+          this.page++
+        })
+    }
+  },
+  computed: {
+    ...mapGetters('goods', [
+      'getItemsOnPage',
+    ])
+  },
+  mounted () {
+    this.fetchMore()
   }
 }
 </script>
 
-<style module>
+<style module lang="scss">
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+
 .header {
-  color: #555;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #eee;
+}
+
+.cart {
+  margin-left: auto;
+}
+
+.catalog {
+  text-align: center;
+}
+
+.main {
+  max-width: 80%;
+  margin: auto;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 </style>
