@@ -19,7 +19,7 @@ app.get('/itemslist/:page', (req, res) => {
 })
 
 app.post('/itemslist', (req, res) => {
-  const filePath = './public/database/page3.json'
+  const filePath = `'./public/database/${page}.json'`
 
   fs.readFile(filePath, 'utf8', (err, data) => {
     const offset = 10
