@@ -14,22 +14,16 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   use: [
-      //     { loader: 'babel-loader' },
-      //   ]
-      // },
       {
         test: /\.[s]?css$/,
         use: [
-          'style-loader', // инжектит стили из js модуля в тэги <style></style>
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
               modules: true,
             }
-          }, // трансформирует css файл в js модуль
+          },
           'sass-loader',
         ]
       },

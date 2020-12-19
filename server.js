@@ -1,29 +1,3 @@
-// const http = require('http')
-// const fs = require('fs')
-
-// const server = http.createServer((req, res) => {
-//   console.log(req.url)
-
-//   const publicPath = './public'
-
-//   let body = null
-//   try {
-//     body = fs.readFileSync(`${publicPath}${req.url}`)
-//   } catch (e) {
-//     console.log(e)
-//     body = fs.readFileSync(`${publicPath}/index.html`)
-//   }
-
-//   res.end(body)
-// })
-
-
-// const port = process.env.PORT || 3000
-// server.listen(port)
-
-// console.log(`Server started on port ${port}!`)
-
-
 const express = require('express')
 const fs = require('fs')
 const app = express()
@@ -45,11 +19,6 @@ app.get('/itemslist/:page', (req, res) => {
 })
 
 app.post('/itemslist', (req, res) => {
-  // 1) Прочитать существующий файл page3.json
-  // 2) Узнать, какой ID был последним
-  // 3) Создать объект с новым ID и с данными, пришедшими от клиента
-  // 4) Записать обновленный JSON в файл
-  // 5) Отдать результат обратно клиенту
   const filePath = './public/database/page3.json'
 
   fs.readFile(filePath, 'utf8', (err, data) => {
