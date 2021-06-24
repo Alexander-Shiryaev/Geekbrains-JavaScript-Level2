@@ -1,9 +1,0 @@
-{
-    "data": [
-        {"name": "Samsung", "model": "Galaxy Tab S6 Lite 10.4", "price": "32 900 руб."},
-        {"name": "HUAWEI", "model": "MatePad LTE", "price": "21 590 руб."},
-        {"name": "HONOR Pad V6", "model": "Pad V6", "price": "26 990 руб."},
-        {"name": "Lenovo", "model": "Tab M10 Plus", "price": "15 990 руб."},
-        {"name": "DIGMA", "model": "CITI 3000 4G", "price": "17 990 руб."}
-    ]
-}
