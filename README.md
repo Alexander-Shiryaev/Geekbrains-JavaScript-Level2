@@ -1,1 +1,2 @@
-lesson1 Node.js Змейка на сервере 
+yarn start
+npm run start
