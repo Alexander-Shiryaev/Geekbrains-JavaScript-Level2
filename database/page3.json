@@ -1,9 +1,0 @@
-{
-    "data": [
-        {"name": "ASUS", "model": "VivoBook", "price": "49 204 руб."},
-        {"name": "HP", "model": "ProBook 450 G7", "price": "78 540 руб."},
-        {"name": "Lenovo", "model": "IdeaPad S145", "price": "52 990 руб."},
-        {"name": "Apple", "model": "MacBook Pro 13", "price": "138 090 руб."},
-        {"name": "Acer", "model": "Swift 5", "price": "86 650 руб."}
-    ]
-}

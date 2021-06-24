@@ -158,7 +158,7 @@ class GoodItem {
       block.classList.add('card');
       block.innerHTML = `
           <div class="img">
-            <img src="laptop.jpg" />
+            <img src="./images/laptop.jpg" />
           </div>
           <div class="meta">
             <div class="meta__row">
